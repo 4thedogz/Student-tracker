@@ -84,3 +84,6 @@ class StudentController:
             # Handle any exceptions (e.g., database errors) here
             print(str(e))
             return None  # Search operation failed
+
+    def get_student_by_email(self, email):
+        return Student.query.filter_by(email=email).first()
